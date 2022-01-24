@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>회원가입 페이지</title>
+    <link href="https://unpkg.com/boxicons@latest/css/boxicons.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./css/index.css" />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.12.0/css/all.css"
+      integrity="sha384-ekOryaXPbeCpWQNxMwSWVvQ0+1VrStoPJq54shlYhR8HzQgig1v5fas6YgOqLoKz"
+      crossorigin="anonymous"
+    />
+    <script type="module" src="js/signup.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  </head>
+
+  <body class="signup-body">
+    <header>
+      <h1 class="header-logo">
+        <a href="/"><i class="fal fa-user-circle fa-3x"></i></a>
+      </h1>
+    </header>
+    <main>
+      <section>
+        <form class="signup-form" autobcomplete="off">
+          <fieldset>
+            <legend class="sr-only">회원가입 폼</legend>
+            <h2 class="sr-only">인적사항</h2>
+            <div class="signup-form-info signup-form-name">
+              <input id="name" type="text" class="signup-form-input" placeholder=" " />
+              <label for="name" class="signup-form-label name">이름</label>
+              <i class="icon icon-success bx bxs-check-circle hidden"></i>
+              <i class="icon icon-error bx bxs-x-circle hidden"></i>
+              <div class="error"></div>
+            </div>
+            <div class="signup-form-info signup-form-email">
+              <input id="email" type="email" class="signup-form-input" placeholder=" " />
+              <label for="email" class="signup-form-label email">이메일</label>
+              <button type="button" class="signup-form-email-button" disabled>중복확인</button>
+              <i class="icon icon-success bx bxs-check-circle hidden"></i>
+              <i class="icon icon-error bx bxs-x-circle hidden"></i>
+              <div class="error"></div>
+            </div>
+            <div class="signup-form-info signup-form-phone">
+              <input id="phone" type="phone" class="signup-form-input" placeholder=" " />
+              <label for="phone" class="signup-form-label phone">휴대전화</label>
+              <i class="icon icon-success bx bxs-check-circle hidden"></i>
+              <i class="icon icon-error bx bxs-x-circle hidden"></i>
+              <div class="error"></div>
+            </div>
+            <div class="signup-form-info signup-form-password">
+              <input id="password" type="password" class="signup-form-input" placeholder=" " />
+              <label for="password" class="signup-form-label password">비밀번호</label>
+              <i class="icon icon-success bx bxs-check-circle hidden"></i>
+              <i class="icon icon-error bx bxs-x-circle hidden"></i>
+              <div class="error"></div>
+            </div>
+            <div class="signup-form-info signup-form-password">
+              <input id="confirm-password" type="password" class="signup-form-input" placeholder=" " />
+              <label for="confirm-password" class="signup-form-label confirm-password">비밀번호 확인</label>
+              <i class="icon icon-success bx bxs-check-circle hidden"></i>
+              <i class="icon icon-error bx bxs-x-circle hidden"></i>
+              <div class="error"></div>
+            </div>
+
+            <!-- 회원가입 버튼 -->
+            <div>
+              <button type="submit" class="form-button" disabled>회원가입</button>
+            </div>
+            <a href="./signin" class="form-back">뒤로가기</a>
+          </fieldset>
+        </form>
+      </section>
+    </main>
+  </body>
+</html>

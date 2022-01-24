@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>로그인 페이지</title>
+    <link href="https://unpkg.com/boxicons@latest/css/boxicons.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./css/index.css" />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.12.0/css/all.css"
+      integrity="sha384-ekOryaXPbeCpWQNxMwSWVvQ0+1VrStoPJq54shlYhR8HzQgig1v5fas6YgOqLoKz"
+      crossorigin="anonymous"
+    />
+    <script type="module" src="js/signin.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  </head>
+
+  <body class="body">
+    <div class="cover hidden"></div>
+    <header>
+      <h1 class="header-logo">
+        <a href="./index.html"><i class="fal fa-user-circle fa-3x"></i></a>
+      </h1>
+    </header>
+    <main>
+      <section>
+        <form class="signin-form" autocomplete="off">
+          <fieldset>
+            <legend class="sr-only">로그인 폼</legend>
+            <div class="signin-form-info signin-form-email">
+              <input id="email" type="email" class="signin-form-input" placeholder=" " />
+              <label for="email" class="signin-form-label">이메일</label>
+              <i class="icon icon-success bx bxs-check-circle hidden"></i>
+              <i class="icon icon-error bx bxs-x-circle hidden"></i>
+              <div class="error"></div>
+            </div>
+            <!-- 비밀번호 입력칸 -->
+            <div class="signin-form-info signin-form-password">
+              <input id="password" type="password" class="signin-form-input" placeholder=" " />
+              <label for="password" class="signin-form-label">비밀번호</label>
+              <span class="bar"></span>
+              <i class="icon icon-success bx bxs-check-circle hidden"></i>
+              <i class="icon icon-error bx bxs-x-circle hidden"></i>
+              <div class="error"></div>
+            </div>
+            <!-- 자동로그인 / 계정찾기 -->
+            <div class="signin-form-auto-find">
+              <div class="auto-login">
+                <input type="checkbox" id="auto__login" name="login" />
+                <label for="auto__login">자동 로그인</label>
+              </div>
+              <!-- 체크박스 입력시 나올 문구 -->
+              <a href="#" class="find"><span>비밀번호 찾기</span></a>
+            </div>
+            <!-- 로그인 버튼 -->
+            <div class="singin-error-login"></div>
+            <div>
+              <button type="submit" class="form-button" disabled>로그인</button>
+            </div>
+          </fieldset>
+        </form>
+        <p class="signin-form-more">
+          페이지가 처음이신가요?
+          <a href="javascript:void(0)">간편 가입하기</a>
+        </p>
+        <div class="popup hidden">
+          <h2 class="title hidden">check delete account</h2>
+          <i class="cancle-button bx bx-x"></i>
+          <p>비밀번호 찾기</p>
+          <form class="popup-form">
+            <input type="email" id="check-password" class="find-password" placeholder="이메일을 입력하세요." />
+            <label for="check-password" class="error"></label>
+            <!-- <button type="submit" class="popup-button ok-button">OK</button> -->
+            <div class="find-error"></div>
+            <button type="button" class="popup-button delete-button" disabled>찾기</button>
+          </form>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

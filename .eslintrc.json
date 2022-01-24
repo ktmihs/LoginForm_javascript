@@ -24,6 +24,7 @@
     "comma-dangle": "off",
     "func-names": "off", // setTimeout(function () {}, 0);
     "prefer-template": "off",
+    "linebreak-style": 0,
     "no-nested-ternary": "off",
     "max-classes-per-file": "off",
     "consistent-return": "off",

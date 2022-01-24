@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>마이페이지 페이지</title>
+  <link type="text/css" rel="stylesheet" href="/css/index.css" />
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.12.0/css/all.css"
+    integrity="sha384-ekOryaXPbeCpWQNxMwSWVvQ0+1VrStoPJq54shlYhR8HzQgig1v5fas6YgOqLoKz" crossorigin="anonymous" />
+
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script defer src="/js/mypage.js"></script>
+</head>
+
+<body class="mypage-body">
+  <header>
+    <h1 class="header-logo">
+      <a href="./index.html"><i class="fal fa-user-circle fa-3x"></i></a>
+    </h1>
+  </header>
+  <main>
+    <section>
+      <form class="mypage-form">
+        <fieldset>
+          <legend class="sr-only">마이페이지</legend>
+          <h2 class="mypage-title">마이페이지</h2>
+          <div class="mypage-form-info mypage-form-email">
+            <input id="email" minlength="100" type="email" disabled />
+            <label for="email" class="mypage-form-label email mypage-label">이메일</label>
+          </div>
+          <div class="mypage-form-info mypage-form-name">
+            <input id="name" minlength="100" type="text" disabled />
+            <label for="name" class="mypage-form-label name mypage-label">이름</label>
+          </div>
+          <div class="mypage-form-info mypage-form-phone">
+            <input id="phone" minlength="100" type="phone" disabled />
+            <label for="phone" class="mypage-form-label phone mypage-label">휴대전화</label>
+          </div>
+
+          <!-- 정보 수정 버튼 -->
+          <div>
+            <button type="button" class="form-button edit-profile-button">정보 수정</button>
+          </div>
+          <button type="button" class="form-back">로그아웃</button>
+        </fieldset>
+      </form>
+    </section>
+  </main>
+</body>
+
+</html>
